@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Buttons</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Amazing Fancy CSS Buttons</h1>
+    <p>Fancy  css  buttons  with  free  source  code!</p>
+    <p>(Note: here the box classes is for background of the buttons)</p>
+    <div class="cfa">
+      <h3>Common CSS For All</h3>
+      <code>
+        {
+        width: 90px;<br />
+        height: 40px;<br />
+        cursor: pointer;<br />
+        font-size: 1rem;<br />
+        padding: 5px;<br />
+        font-weight: bold;<br />
+        letter-spacing: 1px;<br />
+        border: none;<br />
+        }</code
+      >
+    </div>
+    <div class="main_container">
+      <div class="box1"><button class="btn1">Button1</button></div>
+      <div>
+        <code
+          >.btn1{ border:2px solid black;<br />
+          box-shadow: 2px 2px #1b1b1b; }</code
+        >
+      </div>
+      <div class="box2"><button class="btn2">Button2</button></div>
+      <div>
+        <code
+          >.btn2{ transition: all .4s ease-in; } .btn2:hover{ background:black;
+          color:white; }</code
+        >
+      </div>
+      <div class="box3"><button class="btn3">Button3</button></div>
+      <div>
+        <code
+          >.btn3::before { content: ""; position: absolute; top: 0; bottom: 0;
+          left: 0; right: 0; border-bottom: 2px solid blue; transition:
+          transform 300ms ease-in-out; transform: scaleX(0); }<br />
+          .btn3:hover::before, .btn3:focus::before { transform: scaleX(1);
+          }</code
+        >
+      </div>
+      <div class="box4"><button class="btn4">Button4</button></div>
+      <div>
+        <code
+          >.btn4{ background:magenta; color:white; animation: pulse-pop 2s
+          alternate infinite; }<br /> @keyframes pulse-pop{ from{ transform:scale(1);
+          } to{ transform:scale(.88); } }</code
+        >
+      </div>
+      <div class="box5"><button class="btn5">Button5</button></div>
+      <div>
+        <code>
+          .btn5 { background-image: linear-gradient(to bottom right, #ff5858,
+          #d814a7); animation: color-shift 3s ease alternate infinite; color:
+          white; }<br />@keyframes color-shift { from { filter: none; } to { filter:
+          hue-rotate(360deg); } }</code
+        >
+      </div>
+      <div class="box6"><button class="btn6">Button6</button></div>
+      <div>
+        <code
+          >.btn6::before { content: ""; position: absolute; top: 0; bottom: 0;
+          left: 0; right: 0; background-color: #f700ff; z-index: -1; transition:
+          all 300ms ease-in-out; transform: scaleX(0); transform-origin: left
+          center; } <br />.btn6:hover::before, .btn6:focus::before { transform:
+          scaleX(1); } <br />.btn6:hover { color: white; } .btn6 { z-index: 1; }</code
+        >
+      </div>
+      <div class="box7"><button class="btn7">Button7</button></div>
+      <div>
+        <code
+          >.box7{ background: black; } .btn7{ background: black; color:white;
+          border-radius: 4px; box-shadow: 0 0 5px #ffd519, 0 0 10px #ffd519, 0 0
+          30px #ffd519; animation: c-shift 2s ease alternate infinite; }<br />
+          .btn7:hover { color: black; background: white; animation: none;
+          box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white, 0 0 40px
+          whitesmoke; }<br /> @keyframes c-shift { from { filter: none; } to { filter:
+          hue-rotate(270deg); } }</code
+        >
+      </div>
+      <div class="box8"><button class="btn8">Button8</button></div>
+      <div>
+        <code
+          >.box8 { background: black; }<br /> .btn8 { background: black; color: white;
+          border: 1px solid white; animation: glowing-shadow1 1.5s alternate
+          infinite; }<br /> .btn8:hover { color: black; background: white; animation:
+          none; box-shadow: 0 0 5px white, 0 0 20px white, 0 0 40px white, 0 0
+          80px whitesmoke; }<br /> @keyframes glowing-shadow1 { from { box-shadow:
+          none; } to { box-shadow: 0 0 5px white, 0 0 20px white, 0 0 40px
+          white; } }</code
+        >
+      </div>
+      <div class="box9"><button class="btn9">Button9</button></div>
+      <div>
+        <code
+          >.box9 { background: #050505; }<br /> .btn9 { background: #050505; color:
+          #2fffe3; border: 1px solid #2fffe3; transition: 0.4s; }<br /> .btn9:hover {
+          color: #050505; background: #2fffe3; box-shadow: 0 0 5px #2fffe3, 0 0
+          25px #2fffe3, 0 0 50px #2fffe3, 0 0 100px #2fffe3; }<br /> .btn9:active {
+          transform: scale(0.7); }</code
+        >
+      </div>
+    </div>
+    <footer><i>Coded by <a href="https://github.com/Neerajkumarc" target="_blank">Neerajkumar</a></i></footer>
+  </body>
+</html>

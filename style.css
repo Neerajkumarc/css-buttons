@@ -1,0 +1,255 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* ========================================================================================= */
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+h1,p{
+  letter-spacing: 3px;
+  text-align:center;
+}
+/* ========================================================================================= */
+
+.main_container{
+  width: 800px;
+  height:auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 2px solid black;
+  grid-gap: 10px;
+  padding: 10px;
+}
+/* ========================================================================================= */
+
+.cfa{
+  margin:10px 0; 
+  width: 800px;
+  height:auto;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  border: 2px solid black;
+  text-align:center;
+  padding-bottom:15px;
+}
+/* ========================================================================================= */
+
+.main_container > div {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+}
+/* ========================================================================================= */
+
+button {
+  position: relative;
+  width: 90px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+}
+/* ========================================================================================= */
+.btn1{
+border:2px solid black;
+box-shadow: 2px 2px #1b1b1b;
+}
+/* ========================================================================================= */
+
+.btn2{
+  transition: all .4s ease-in;
+} 
+.btn2:hover{
+  background:black;
+  color:white;
+  
+}
+/* ========================================================================================= */
+
+.btn3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid blue;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+}
+.btn3:hover::before,
+.btn3:focus::before {
+  transform: scaleX(1);
+}
+/* ========================================================================================= */
+.btn4{
+  background:magenta;
+  color:white;
+  animation: pulse-pop 2s alternate infinite;
+}
+@keyframes pulse-pop{
+  from{
+    transform:scale(1);
+  }
+  to{
+    transform:scale(.88);
+  }
+}
+
+/* ========================================================================================= */
+
+.btn5 {
+  background-image: linear-gradient(to bottom right, #ff5858, #d814a7);
+  animation: color-shift 3s ease alternate infinite;
+  color: white;
+}
+@keyframes color-shift {
+  from {
+    filter: none;
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* ========================================================================================= */
+
+.btn6::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f700ff;
+  z-index: -1;
+  transition: all 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.btn6:hover::before,
+.btn6:focus::before {
+  transform: scaleX(1);
+}
+.btn6:hover {
+  color: white;
+}
+.btn6 {
+  z-index: 1;
+}
+/* ========================================================================================= */
+.box7{
+  background: black;
+}
+.btn7{
+  background: black;
+  color:white;
+  border-radius: 4px;
+  box-shadow: 0 0 5px  #ffd519, 0 0 10px #ffd519, 0 0 30px  #ffd519;
+   
+  animation: c-shift 2s ease alternate infinite;
+}
+.btn7:hover {
+  color: black;
+  background: white;
+  animation: none;
+  box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white,
+    0 0 40px whitesmoke;
+}
+  @keyframes c-shift {
+  from {
+    filter: none;
+  }
+  to {
+    filter: hue-rotate(270deg);
+  }
+}
+/* ========================================================================================= */
+
+.box8 {
+  background: black;
+}
+.btn8 {
+  background: black;
+  color: white;
+  border: 1px solid white;
+
+  animation: glowing-shadow1 1.5s alternate infinite;
+}
+.btn8:hover {
+  color: black;
+  background: white;
+  animation: none;
+  box-shadow: 0 0 5px white, 0 0 20px white, 0 0 40px white,
+    0 0 80px whitesmoke;
+}
+@keyframes glowing-shadow1 {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 0 0 5px white, 0 0 20px white, 0 0 40px white;
+  }
+}
+/* ========================================================================================= */
+
+.box9 {
+  background: #050505;
+}
+.btn9 {
+  background: #050505;
+  color: #2fffe3;
+  border: 1px solid #2fffe3;
+  transition: 0.4s;
+}
+.btn9:hover {
+  color: #050505;
+  background: #2fffe3;
+  box-shadow: 0 0 5px #2fffe3, 0 0 25px #2fffe3, 0 0 50px #2fffe3,
+    0 0 100px #2fffe3;
+}
+.btn9:active {
+  transform: scale(0.7);
+}
+/* ========================================================================================= */
+
+.code >div{
+    border:2px solid black;
+}
+/* ========================================================================================= */
+
+footer{
+ margin:20px 0;
+ font-size:1rem;
+ letter-spacing: 3px;
+}
+/* ========================================================================================= */
+@media (max-width:850px){
+  
+  .main_container{
+    width:auto;
+    display:block;
+   
+  }
+  .main_container > div{
+    margin:10px;
+  }
+  .cfa{
+    width:100%;
+    margin:10px;
+  }
+}
